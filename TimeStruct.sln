@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeStruct", "TimeStruct\TimeStruct.csproj", "{FE358AC1-65B7-4CF6-A70C-144792C5C02A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeStruct.Tests", "TimeStruct.Tests\TimeStruct.Tests.csproj", "{26BCE6FE-5A88-4F32-A16F-B491579830CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE358AC1-65B7-4CF6-A70C-144792C5C02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE358AC1-65B7-4CF6-A70C-144792C5C02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE358AC1-65B7-4CF6-A70C-144792C5C02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE358AC1-65B7-4CF6-A70C-144792C5C02A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BCE6FE-5A88-4F32-A16F-B491579830CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BCE6FE-5A88-4F32-A16F-B491579830CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BCE6FE-5A88-4F32-A16F-B491579830CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BCE6FE-5A88-4F32-A16F-B491579830CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
