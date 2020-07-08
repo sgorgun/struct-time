@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace TimeStruct.Tests
 {
-    public class TestCases
+    public class TestCasesSource
     {
         public static IEnumerable<TestCaseData> TestCasesForToString
         {
@@ -83,7 +83,7 @@ namespace TimeStruct.Tests
                 yield return new TestCaseData(new Time(-121, -58100), 40);
             }
         }
-        public static IEnumerable<TestCaseData> TestCasesForToCtor
+        public static IEnumerable<TestCaseData> TestCasesForTwoParametersCtor
         {
             get
             {
@@ -107,6 +107,24 @@ namespace TimeStruct.Tests
                 yield return new TestCaseData(new Time(2, -60), 1, 0);
                 yield return new TestCaseData(new Time(-25, -160), 20, 20);
                 yield return new TestCaseData(new Time(-121, -58100), 14, 40);
+            }
+        }
+        
+        public static IEnumerable<TestCaseData> TestCasesForOneParameterCtor
+        {
+            get
+            {
+                yield return new TestCaseData(new Time(160), 2, 40);
+                yield return new TestCaseData(new Time(1723), 4, 43);
+                yield return new TestCaseData(new Time(160), 2, 40);
+                yield return new TestCaseData(new Time(3001), 2, 1);
+                yield return new TestCaseData(new Time(8640), 0, 0);
+                yield return new TestCaseData(new Time(15), 0, 15);
+                yield return new TestCaseData(new Time(0), 0, 0);
+                yield return new TestCaseData(new Time( -40), 23, 20);
+                yield return new TestCaseData(new Time( -160), 21, 20);
+                yield return new TestCaseData(new Time( -60), 23, 0);
+                yield return new TestCaseData(new Time( -58100), 15, 40);
             }
         }
     }
