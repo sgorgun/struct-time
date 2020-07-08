@@ -1,7 +1,7 @@
 # The Time Struct
 
 ## Task description
-Design a *immutable* struct `Time` (add code in `Time.cs` file in `TimeStruct Project`) that represents the times in `24`-hours format without dates according to the following requirements.    
+Design a *immutable* struct `Time` (add code in `Time.cs` file in `TimeStruct Project`) that represents the times in `24`-hours format without date according to the following requirements.    
 - The `Time` struct should have constructor with two integers parameters `hours` and `minutes`. 
     - Value of `hours` and `minutes` parameters can be any and are converted into the standard range for hours `(0..23)` and minutes `(0..59)`.
 - The `Time` struct should have following properties.
