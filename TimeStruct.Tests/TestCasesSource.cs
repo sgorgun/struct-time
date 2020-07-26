@@ -58,7 +58,7 @@ namespace TimeStruct.Tests
                 yield return new TestCaseData(new Time(-121, -58100), 14);
             }
         }
-        
+
         public static IEnumerable<TestCaseData> TestCasesForMinutesProperty
         {
             get
@@ -85,7 +85,7 @@ namespace TimeStruct.Tests
                 yield return new TestCaseData(new Time(-121, -58100), 40);
             }
         }
-        
+
         public static IEnumerable<TestCaseData> TestCasesForTwoParametersCtor
         {
             get
@@ -112,7 +112,7 @@ namespace TimeStruct.Tests
                 yield return new TestCaseData(new Time(-121, -58100), 14, 40);
             }
         }
-        
+
         public static IEnumerable<TestCaseData> TestCasesForOneParameterCtor
         {
             get
