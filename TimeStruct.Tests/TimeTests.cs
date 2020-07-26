@@ -13,7 +13,7 @@ namespace TimeStruct.Tests
         {
             Assert.AreEqual(str, time.ToString());
         }
-
+        
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForMinutesProperty))]
         public void MinutesPropertyTests(Time time, int minutes)
