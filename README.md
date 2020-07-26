@@ -12,4 +12,4 @@ Design a *immutable* struct `Time` (add code in `Time.cs` file in `TimeStruct Pr
     - `Minutes` is a read-write `System.Int32` property that indicates minutes in `60`-minuts format and whose value is supplied by calling the `Time` constructor.
 - The `Time` struct should have following methods:
     - A `ToString` method to return the information about time. For example, for the object with the values `Hours = 8, Minutes = 45`, method returns following string `"08:45"`.
--  For a detailed description of the `Time` struct, see test cases also. 
+-  For a detailed description of the `Time` struct, see [test cases](https://gitlab.com/epam-autocode-tasks/struct-time/-/blob/master/TimeStruct.Tests/TimeTests.cs). 
