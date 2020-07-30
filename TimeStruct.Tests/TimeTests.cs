@@ -32,16 +32,22 @@ namespace TimeStruct.Tests
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForTwoParametersCtor))]
         public void CtorWithTwoParametersTests(Time time, int hour, int minutes)
         {
-            Assert.AreEqual(hour, time.Hours);
-            Assert.AreEqual(minutes, time.Minutes);
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(hour, time.Hours);
+                Assert.AreEqual(minutes, time.Minutes);
+            });   
         }
         
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForOneParameterCtor))]
         public void CtorWithOneParameterTests(Time time, int hour, int minutes)
         {
-            Assert.AreEqual(hour, time.Hours);
-            Assert.AreEqual(minutes, time.Minutes);
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(hour, time.Hours);
+                Assert.AreEqual(minutes, time.Minutes);
+            });  
         }
     }
 }
