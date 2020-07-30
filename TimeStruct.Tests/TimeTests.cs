@@ -15,19 +15,26 @@ namespace TimeStruct.Tests
         }
         
         [Test]
+        [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForToString))]
+        public void ToStringTests(object time, string str)
+        {
+            Assert.AreEqual(str, time.ToString());
+        }
+        
+        [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForMinutesProperty))]
-        public void MinutesPropertyTests(Time time, int minutes)
+        public void MinutesPropertyGetTests(Time time, int minutes)
         {
             Assert.AreEqual(minutes, time.Minutes);
         }
         
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForHoursProperty))]
-        public void HoursPropertyTests(Time time, int hour)
+        public void HoursPropertyGetTests(Time time, int hour)
         {
             Assert.AreEqual(hour, time.Hours);
         }
-        
+
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForTwoParametersCtor))]
         public void CtorWithTwoParametersTests(Time time, int hour, int minutes)
@@ -48,6 +55,19 @@ namespace TimeStruct.Tests
                 Assert.AreEqual(hour, time.Hours);
                 Assert.AreEqual(minutes, time.Minutes);
             });  
+        }
+        
+        [Test]
+        [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForTwoParametersCtor))]
+        public void DeconstructTests(Time time, int expectedHours, int expectedMinutes)
+        {
+            var (hours, minutes) = time;
+            
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(expectedHours, hours);
+                Assert.AreEqual(expectedMinutes, minutes);
+            });
         }
     }
 }
