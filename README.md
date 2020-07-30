@@ -12,5 +12,5 @@ Design a struct `Time` (add code in `Time.cs` file in `TimeStruct Project`) that
     - `Minutes` is a read-write `System.Int32` property that indicates minutes in `60`-minuts format and whose value is supplied by calling the `Time` constructor.
 - The `Time` struct should have following methods:
     - A `ToString` method to return the information about time. For example, for the object with the values `Hours = 8, Minutes = 45`, method returns following string `"08:45"`.
-- The `Time` struct should have [Deconstruct](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct#deconstructing-user-defined-types) methods.
+- The `Time` struct should have [Deconstruct](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct#deconstructing-user-defined-types) method.
 -  For a detailed description of the `Time` struct, see [test cases](TimeStruct.Tests/TimeTests.cs). 
