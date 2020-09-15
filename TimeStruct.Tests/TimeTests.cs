@@ -16,7 +16,7 @@ namespace TimeStruct.Tests
         
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForToStringThroughObject))]
-        public void ToStringThroughObjectTests(object time, string str)
+        public void ToStringThroughObjectTests(object time)
         {
             Assert.AreEqual("TimeStruct.Time", time.ToString());
         }
