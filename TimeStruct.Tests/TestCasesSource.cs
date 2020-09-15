@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace TimeStruct.Tests
@@ -36,13 +36,13 @@ namespace TimeStruct.Tests
         {
             get
             {
-                yield return new TestCaseData(new Time(24, 0), "00:00");
-                yield return new TestCaseData(new Time(25, 0), "01:00");
-                yield return new TestCaseData(new Time(100, 0), "04:00");
-                yield return new TestCaseData(new Time(1, 60), "02:00");
-                yield return new TestCaseData(new Time(72, 8640), "00:00");
-                yield return new TestCaseData(new Time(-1, 15), "23:15");
-                yield return new TestCaseData(new Time(-25, 0), "23:00");
+                yield return new TestCaseData(new Time(24, 0));
+                yield return new TestCaseData(new Time(25, 0));
+                yield return new TestCaseData(new Time(100, 0));
+                yield return new TestCaseData(new Time(1, 60));
+                yield return new TestCaseData(new Time(72, 8640));
+                yield return new TestCaseData(new Time(-1, 15));
+                yield return new TestCaseData(new Time(-25, 0));
             }
         }
 
