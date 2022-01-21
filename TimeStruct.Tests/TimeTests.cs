@@ -1,7 +1,5 @@
 using NUnit.Framework;
 
-#pragma warning disable CA1707
-
 namespace TimeStruct.Tests
 {
     [TestFixture]
