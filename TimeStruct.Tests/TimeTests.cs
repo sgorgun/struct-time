@@ -1,4 +1,4 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace TimeStruct.Tests
 {
@@ -11,21 +11,21 @@ namespace TimeStruct.Tests
         {
             Assert.AreEqual(str, time.ToString());
         }
-        
+
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForToStringThroughObject))]
         public void ToStringThroughObjectTests(object time)
         {
             Assert.AreEqual("TimeStruct.Time", time.ToString());
         }
-        
+
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForMinutesProperty))]
         public void MinutesPropertyGetTests(Time time, int minutes)
         {
             Assert.AreEqual(minutes, time.Minutes);
         }
-        
+
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForHoursProperty))]
         public void HoursPropertyGetTests(Time time, int hour)
@@ -41,9 +41,9 @@ namespace TimeStruct.Tests
             {
                 Assert.AreEqual(hour, time.Hours);
                 Assert.AreEqual(minutes, time.Minutes);
-            });   
+            });
         }
-        
+
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForOneParameterCtor))]
         public void CtorWithOneParameterTests(Time time, int hour, int minutes)
@@ -52,15 +52,15 @@ namespace TimeStruct.Tests
             {
                 Assert.AreEqual(hour, time.Hours);
                 Assert.AreEqual(minutes, time.Minutes);
-            });  
+            });
         }
-        
+
         [Test]
         [TestCaseSource(typeof(TestCasesSource), nameof(TestCasesSource.TestCasesForTwoParametersCtor))]
         public void DeconstructTests(Time time, int expectedHours, int expectedMinutes)
         {
             var (hours, minutes) = time;
-            
+
             Assert.Multiple(() =>
             {
                 Assert.AreEqual(expectedHours, hours);

@@ -31,7 +31,7 @@ namespace TimeStruct.Tests
                 yield return new TestCaseData(new Time(-121, -58100), "14:40");
             }
         }
-        
+
         public static IEnumerable<TestCaseData> TestCasesForToStringThroughObject
         {
             get
