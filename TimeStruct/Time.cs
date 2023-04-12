@@ -70,10 +70,6 @@
         /// </summary>
         /// <param name="hours">The number of hours.</param>
         /// <param name="minutes">The number of minutes.</param>
-        public void Deconstruct(out int hours, out int minutes)
-        {
-            hours = this.Hours;
-            minutes = this.Minutes;
-        }
+        public void Deconstruct(out int hours, out int minutes) => (hours, minutes) = (this.Hours, this.Minutes);
     }
 }
