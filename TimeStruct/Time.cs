@@ -37,26 +37,6 @@
         public int Minutes { get; }
 
         /// <summary>
-        /// Converts hours and minutes to a total number of minutes.
-        /// </summary>
-        /// <param name="hours">The number of hours.</param>
-        /// <param name="minutes">The number of minutes.</param>
-        /// <returns>A tuple containing the total number of hours and the remaining minutes.</returns>
-        public static (int hours, int minutes) TimeConvertor(int hours, int minutes)
-        {
-            const int minutesInDay = 24 * 60, minutesInHour = 60, hoursInDay = 24;
-            int totalMinutes = (hours * minutesInHour) + minutes;
-            if (totalMinutes < 0)
-            {
-                totalMinutes = (totalMinutes % minutesInDay) + minutesInDay;
-            }
-
-            int convertedHours = (totalMinutes / minutesInHour) % hoursInDay;
-            int convertedMinutes = totalMinutes % minutesInHour;
-            return (convertedHours, convertedMinutes);
-        }
-
-        /// <summary>
         /// Returns a string representation of the time in the format "HH:MM".
         /// </summary>
         /// <returns>A string representation of the time in the format "HH:MM".</returns>
@@ -71,5 +51,25 @@
         /// <param name="hours">The number of hours.</param>
         /// <param name="minutes">The number of minutes.</param>
         public void Deconstruct(out int hours, out int minutes) => (hours, minutes) = (this.Hours, this.Minutes);
+
+        /// <summary>
+        /// Converts hours and minutes to a total number of minutes.
+        /// </summary>
+        /// <param name="hours">The number of hours.</param>
+        /// <param name="minutes">The number of minutes.</param>
+        /// <returns>A tuple containing the total number of hours and the remaining minutes.</returns>
+        private static (int hours, int minutes) TimeConvertor(int hours, int minutes)
+        {
+            const int minutesInDay = 24 * 60, minutesInHour = 60, hoursInDay = 24;
+            int totalMinutes = (hours * minutesInHour) + minutes;
+            if (totalMinutes < 0)
+            {
+                totalMinutes = (totalMinutes % minutesInDay) + minutesInDay;
+            }
+
+            int convertedHours = (totalMinutes / minutesInHour) % hoursInDay;
+            int convertedMinutes = totalMinutes % minutesInHour;
+            return (convertedHours, convertedMinutes);
+        }
     }
 }
