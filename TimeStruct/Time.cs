@@ -40,10 +40,7 @@
         /// Returns a string representation of the time in the format "HH:MM".
         /// </summary>
         /// <returns>A string representation of the time in the format "HH:MM".</returns>
-        public new string ToString()
-        {
-            return $"{this.Hours:00}:{this.Minutes:00}";
-        }
+        public new string ToString() => $"{this.Hours:00}:{this.Minutes:00}";
 
         /// <summary>
         /// Deconstructs the time into its component hours and minutes.
